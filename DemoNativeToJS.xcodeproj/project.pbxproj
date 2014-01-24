@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B1F199D188FC2880051CD57 /* webviewContent.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B1F199C188FC2880051CD57 /* webviewContent.html */; };
+		2BA523DA1890F0C300F86765 /* test.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2BA523D91890F0C300F86765 /* test.jpeg */; };
+		9328C159B6ED30B9D764BCB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9328CACECFC97AF9DA2C7BA3 /* Images.xcassets */; };
+		9328C37CA8FC62A7CE2B29D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9328C218002FDD8A833B7992 /* Foundation.framework */; };
+		9328C3DAA4AE4A700E2FE36B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9328C7D08EB1397CDD659290 /* UIKit.framework */; };
+		9328C45B1137E3A2C1081A21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9328C7D08EB1397CDD659290 /* UIKit.framework */; };
+		9328C48EBA4F87BE788102DE /* igViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9328C6320F7CC7C7C7DF7696 /* igViewController.m */; };
+		9328C4A6C2D6A788573D4C2C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9328C498C9CAE437480FDD83 /* QuartzCore.framework */; };
+		9328C5380207D606A322A926 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9328CD10868949AFBFC65D7A /* InfoPlist.strings */; };
+		9328C77F2C2DB9D59C61B06C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9328C9E6BC8238E109C9B2B6 /* AVFoundation.framework */; };
+		9328C79FD65D430EC8CBE8CD /* igAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9328C545703003C133C53135 /* igAppDelegate.m */; };
+		9328CCB5CFC28C701B4F2CAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9328C25C460FFB391983D984 /* main.m */; };
+		9328CCDA574C965F720C49BB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9328C5441EEA3B1C9B6E2157 /* Main_iPad.storyboard */; };
+		9328CDC1FC8B9B5E66081463 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9328CA1BBADA7883C701F672 /* CoreGraphics.framework */; };
+		9328CDD89B67976C15144DB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9328C218002FDD8A833B7992 /* Foundation.framework */; };
+		9328CF6F266BF7EA4B786F4A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9328C554AF6B216D4809190B /* Main_iPhone.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9328CF0CF928BF2771F6ECB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9328C14A47E123AA28E7C5BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9328C28FD4B5C0597F3BB98E;
+			remoteInfo = ScanBarCodes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B1F199C188FC2880051CD57 /* webviewContent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webviewContent.html; sourceTree = "<group>"; };
+		2BA523D91890F0C300F86765 /* test.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpeg; sourceTree = "<group>"; };
+		9328C218002FDD8A833B7992 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9328C25C460FFB391983D984 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9328C498C9CAE437480FDD83 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9328C4E7D44A6FB9CBE91CA4 /* igViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = igViewController.h; sourceTree = "<group>"; };
+		9328C545703003C133C53135 /* igAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = igAppDelegate.m; sourceTree = "<group>"; };
+		9328C58EDAE8048334B25113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9328C6320F7CC7C7C7DF7696 /* igViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = igViewController.m; sourceTree = "<group>"; };
+		9328C657B77B7D360628ACD8 /* igAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = igAppDelegate.h; sourceTree = "<group>"; };
+		9328C7D08EB1397CDD659290 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9328C9E6BC8238E109C9B2B6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9328CA1BBADA7883C701F672 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9328CA7F74038A1FA3AD7CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		9328CACECFC97AF9DA2C7BA3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9328CC3F445FCB44348D634E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		9328CD8EF901B5127EACDF04 /* DemoNativeToJS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoNativeToJS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9328CFA7CB9721476D5E8087 /* DemoNativeToJS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoNativeToJS-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9328C6614C8DEA644F4DB33A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9328C37CA8FC62A7CE2B29D0 /* Foundation.framework in Frameworks */,
+				9328CDC1FC8B9B5E66081463 /* CoreGraphics.framework in Frameworks */,
+				9328C45B1137E3A2C1081A21 /* UIKit.framework in Frameworks */,
+				9328C77F2C2DB9D59C61B06C /* AVFoundation.framework in Frameworks */,
+				9328C4A6C2D6A788573D4C2C /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9328CE7D925B67217068BFFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9328CDD89B67976C15144DB1 /* Foundation.framework in Frameworks */,
+				9328C3DAA4AE4A700E2FE36B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9328C67978BEFE2EA166201F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9328CD8EF901B5127EACDF04 /* DemoNativeToJS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9328C82A40F96D83181373D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BA523D91890F0C300F86765 /* test.jpeg */,
+				9328CFA7CB9721476D5E8087 /* DemoNativeToJS-Info.plist */,
+				9328CD10868949AFBFC65D7A /* InfoPlist.strings */,
+				9328C25C460FFB391983D984 /* main.m */,
+				2B1F199C188FC2880051CD57 /* webviewContent.html */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9328CA3696F4E301F32EF824 = {
+			isa = PBXGroup;
+			children = (
+				9328C67978BEFE2EA166201F /* Products */,
+				9328CBF481AE1175F635C99D /* Frameworks */,
+				9328CE10ED2B28FB39B8F5CF /* DemoNativeToJS */,
+			);
+			sourceTree = "<group>";
+		};
+		9328CBF481AE1175F635C99D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9328C218002FDD8A833B7992 /* Foundation.framework */,
+				9328CA1BBADA7883C701F672 /* CoreGraphics.framework */,
+				9328C7D08EB1397CDD659290 /* UIKit.framework */,
+				9328C9E6BC8238E109C9B2B6 /* AVFoundation.framework */,
+				9328C498C9CAE437480FDD83 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9328CE10ED2B28FB39B8F5CF /* DemoNativeToJS */ = {
+			isa = PBXGroup;
+			children = (
+				9328C82A40F96D83181373D7 /* Supporting Files */,
+				9328C657B77B7D360628ACD8 /* igAppDelegate.h */,
+				9328C545703003C133C53135 /* igAppDelegate.m */,
+				9328CACECFC97AF9DA2C7BA3 /* Images.xcassets */,
+				9328C554AF6B216D4809190B /* Main_iPhone.storyboard */,
+				9328C5441EEA3B1C9B6E2157 /* Main_iPad.storyboard */,
+				9328C4E7D44A6FB9CBE91CA4 /* igViewController.h */,
+				9328C6320F7CC7C7C7DF7696 /* igViewController.m */,
+			);
+			path = DemoNativeToJS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9328C01B8A92407AFA7E1C27 /* DemoNativeToJSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9328C34D85DDA864F60ACA6F /* Build configuration list for PBXNativeTarget "DemoNativeToJSTests" */;
+			buildPhases = (
+				9328C076F1C34A970183E73E /* Sources */,
+				9328CE7D925B67217068BFFC /* Frameworks */,
+				9328CB09BCEE9F66F4816DD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9328C9F08F97156CB556208B /* PBXTargetDependency */,
+			);
+			name = DemoNativeToJSTests;
+			productName = ScanBarCodesTests;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9328C28FD4B5C0597F3BB98E /* DemoNativeToJS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9328C9B9339EA932A25C909C /* Build configuration list for PBXNativeTarget "DemoNativeToJS" */;
+			buildPhases = (
+				9328C9546435C6EF920E6D00 /* Sources */,
+				9328C6614C8DEA644F4DB33A /* Frameworks */,
+				9328C881F40BE0B186839C83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DemoNativeToJS;
+			productName = ScanBarCodes;
+			productReference = 9328CD8EF901B5127EACDF04 /* DemoNativeToJS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9328C14A47E123AA28E7C5BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = arasbm;
+			};
+			buildConfigurationList = 9328CA619A5A3A03A12A8F55 /* Build configuration list for PBXProject "DemoNativeToJS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9328CA3696F4E301F32EF824;
+			productRefGroup = 9328C67978BEFE2EA166201F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9328C28FD4B5C0597F3BB98E /* DemoNativeToJS */,
+				9328C01B8A92407AFA7E1C27 /* DemoNativeToJSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9328C881F40BE0B186839C83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B1F199D188FC2880051CD57 /* webviewContent.html in Resources */,
+				9328C5380207D606A322A926 /* InfoPlist.strings in Resources */,
+				9328C159B6ED30B9D764BCB1 /* Images.xcassets in Resources */,
+				9328CF6F266BF7EA4B786F4A /* Main_iPhone.storyboard in Resources */,
+				9328CCDA574C965F720C49BB /* Main_iPad.storyboard in Resources */,
+				2BA523DA1890F0C300F86765 /* test.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9328CB09BCEE9F66F4816DD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9328C076F1C34A970183E73E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9328C9546435C6EF920E6D00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9328CCB5CFC28C701B4F2CAD /* main.m in Sources */,
+				9328C79FD65D430EC8CBE8CD /* igAppDelegate.m in Sources */,
+				9328C48EBA4F87BE788102DE /* igViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9328C9F08F97156CB556208B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9328C28FD4B5C0597F3BB98E /* DemoNativeToJS */;
+			targetProxy = 9328CF0CF928BF2771F6ECB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9328C5441EEA3B1C9B6E2157 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9328CC3F445FCB44348D634E /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		9328C554AF6B216D4809190B /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9328CA7F74038A1FA3AD7CEF /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		9328CD10868949AFBFC65D7A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9328C58EDAE8048334B25113 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9328C2364530D78227219ABD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9328C3B155E3D73D4B8A964A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoNativeToJS/DemoNativeToJS-Prefix.pch";
+				INFOPLIST_FILE = "DemoNativeToJSTests/DemoNativeToJSTests-Info.plist";
+				PRODUCT_NAME = DemoNativeToJSTests;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9328C61648FCD18A90F7AFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoNativeToJS/DemoNativeToJS-Prefix.pch";
+				INFOPLIST_FILE = "DemoNativeToJS/DemoNativeToJS-Info.plist";
+				PRODUCT_NAME = DemoNativeToJS;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9328C968539A3933781EAAEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9328CD4DDB02590CA9700CF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoNativeToJS/DemoNativeToJS-Prefix.pch";
+				INFOPLIST_FILE = "DemoNativeToJSTests/DemoNativeToJSTests-Info.plist";
+				PRODUCT_NAME = DemoNativeToJSTests;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		9328CE23829FA0752D183BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoNativeToJS/DemoNativeToJS-Prefix.pch";
+				INFOPLIST_FILE = "DemoNativeToJS/DemoNativeToJS-Info.plist";
+				PRODUCT_NAME = DemoNativeToJS;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9328C34D85DDA864F60ACA6F /* Build configuration list for PBXNativeTarget "DemoNativeToJSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9328CD4DDB02590CA9700CF8 /* Release */,
+				9328C3B155E3D73D4B8A964A /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9328C9B9339EA932A25C909C /* Build configuration list for PBXNativeTarget "DemoNativeToJS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9328CE23829FA0752D183BDA /* Release */,
+				9328C61648FCD18A90F7AFBD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9328CA619A5A3A03A12A8F55 /* Build configuration list for PBXProject "DemoNativeToJS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9328C968539A3933781EAAEE /* Release */,
+				9328C2364530D78227219ABD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9328C14A47E123AA28E7C5BD /* Project object */;
+}

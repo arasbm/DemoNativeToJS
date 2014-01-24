@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iOS Native to JS WebView Demo</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                font-size: 24px;
+                background-color: #333333;
+                color: white;
+            }
+        div#log {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 1rem;
+        }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" width="600" height="800"></canvas>
+        <div id="log">logs:<br /></div>
+    </body>
+    <script>
+        var image = new Image();
+        var nativeBridge = {
+            invoke: function (commandName, args) {
+                //console.log(commandName + ": " + JSON.stringify(args, null, 2));
+                window.location = 'js-call:' + commandName + ':' + encodeURIComponent(JSON.stringify(args));
+            }
+        };
+    
+        /*
+        window.onerror = function(message, url, lineNumber) {
+            var err = {
+                'url' : url,
+                'lineNumber' : lineNumber
+            };
+            nativeBridge.invoke('error', err);
+            //return true;
+            return false;
+        };*/
+    
+        //var clickevent = window.ontouchend ? 'touchend' : 'click';
+        //var evt = (document.createTouch != null ? "ontouchend" : "click");
+        document.addEventListener('touchend', function() {
+          alert("touch ended!!!");
+          nativeBridge.invoke('nextDemo', {});
+        });
+                                  
+        var logDiv = document.getElementById('log');
+
+        // draw image on canvas
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext("2d");
+        
+        // just to test things
+        ctx.fillStyle = "rgba(200,0,0,0.60)";
+        ctx.fillRect(10, 10, 500, 500);
+        console.log("trying to draw static test image");
+          
+        //image.src = sURL;
+        image.onload = function () {
+          ctx.clearRect(0, 0, this.width, this.height);
+          ctx.drawImage(this, 0, 0);
+        };
+        image.src = "test.jpeg";
+         
+        window.draw = function (image) {
+            console.log("drawing an image");
+            image.src = image;
+        };
+    </script>
+</html>
