@@ -203,8 +203,11 @@
         case DemoCanvas:
             //Let the canvas magic begin!
             //_base64imgCmd = [NSString stringWithFormat:@"draw('data:image/png;base64,%@');", [self encodeToBase64StringPNG:_image]];
-            _base64imgCmd = [NSString stringWithFormat:@"draw('data:image/png;base64,%@');", [self encodeToBase64StringJPEG:_image]];
-            [self.webView stringByEvaluatingJavaScriptFromString:_base64imgCmd];
+            //_base64imgCmd = [NSString stringWithFormat:@"draw('data:image/png;base64,%@');", [self encodeToBase64StringJPEG:_image]];
+            _base64imgCmd = [NSString stringWithFormat:@"draw('data:image/jpeg;base64,%@');", [self encodeToBase64StringJPEG:_image]];
+            //_base64imgCmd = [NSString stringWithFormat:@"draw('data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7');"];
+            [self.webView performSelectorOnMainThread:@selector(stringByEvaluatingJavaScriptFromString:) withObject:_base64imgCmd waitUntilDone:NO];
+            //[self.webView stringByEvaluatingJavaScriptFromString:_base64imgCmd];
             break;
         default:
             NSLog(@"Undefined mode");
@@ -266,7 +269,8 @@ UIImage *imageFromSampleBuffer(CMSampleBufferRef sampleBuffer) {
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    NSLog(@"memort warning");
+    NSLog(@"careful! memory warning");
+    
     // Dispose of any resources that can be recreated.
 }
 
@@ -275,7 +279,8 @@ UIImage *imageFromSampleBuffer(CMSampleBufferRef sampleBuffer) {
 }
 
 - (NSString *)encodeToBase64StringJPEG:(UIImage *)image {
-    return [UIImageJPEGRepresentation(image, 0.1) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    //return [UIImageJPEGRepresentation(image, 0.1) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    return [UIImageJPEGRepresentation(image, 0.7) base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithCarriageReturn];
 }
 
 @end

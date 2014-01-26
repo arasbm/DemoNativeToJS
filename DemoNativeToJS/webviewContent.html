@@ -1,6 +1,7 @@
-<!DOCTYPE html>
 <html>
     <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
         <title>iOS Native to JS WebView Demo</title>
         <style>
             body {
@@ -18,9 +19,10 @@
         </style>
     </head>
     <body>
-        <canvas id="canvas" width="600" height="800"></canvas>
+        <canvas id="canvas" width="600" height="800"/></canvas>
         <div id="log">logs:<br /></div>
     </body>
+    <script src="http://jsconsole.com/remote.js?C5BFED9D-B871-4860-B188-307E7F06436C"></script>
     <script>
         var image = new Image();
         var nativeBridge = {
@@ -29,22 +31,9 @@
                 window.location = 'js-call:' + commandName + ':' + encodeURIComponent(JSON.stringify(args));
             }
         };
-    
-        /*
-        window.onerror = function(message, url, lineNumber) {
-            var err = {
-                'url' : url,
-                'lineNumber' : lineNumber
-            };
-            nativeBridge.invoke('error', err);
-            //return true;
-            return false;
-        };*/
-    
         //var clickevent = window.ontouchend ? 'touchend' : 'click';
         //var evt = (document.createTouch != null ? "ontouchend" : "click");
         document.addEventListener('touchend', function() {
-          alert("touch ended!!!");
           nativeBridge.invoke('nextDemo', {});
         });
                                   
@@ -58,17 +47,18 @@
         ctx.fillStyle = "rgba(200,0,0,0.60)";
         ctx.fillRect(10, 10, 500, 500);
         console.log("trying to draw static test image");
-          
-        //image.src = sURL;
+        
         image.onload = function () {
+          console.log("drawing an image");
           ctx.clearRect(0, 0, this.width, this.height);
-          ctx.drawImage(this, 0, 0);
+          ctx.drawImage(this, 0, 0, canvas.width, canvas.height);
         };
+    
         image.src = "test.jpeg";
-         
-        window.draw = function (image) {
-            console.log("drawing an image");
-            image.src = image;
+        
+        draw = function (imgBase64) {
+            image.src = imgBase64;
+            ctx.drawImage(image, 0, 0, image.width, image.height);
         };
     </script>
 </html>
