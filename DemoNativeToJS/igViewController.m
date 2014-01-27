@@ -105,10 +105,10 @@
     [_output setSampleBufferDelegate:self queue:captureQueue];
     
     // configure the pixel format
-    _output.videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithUnsignedInt:kCVPixelFormatType_32BGRA], (id)kCVPixelBufferPixelFormatTypeKey, nil];
-    //_output.videoSettings =  @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};
+    //_output.videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithUnsignedInt:kCVPixelFormatType_32BGRA], (id)kCVPixelBufferPixelFormatTypeKey, nil];
+    _output.videoSettings =  @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};
     //_output.videoSettings =
-    //_output.alwaysDiscardsLateVideoFrames=YES;
+    _output.alwaysDiscardsLateVideoFrames=YES;
 
     [_session addOutput:_output];
     
@@ -260,7 +260,8 @@ UIImage *imageFromSampleBuffer(CMSampleBufferRef sampleBuffer) {
     
     CGDataProviderRelease(dataProvider);
     // Create and return an image object to represent the Quartz image.
-    UIImage *image = [UIImage imageWithCGImage:cgImage];
+    UIImage *image = [UIImage imageWithCGImage:cgImage scale:1.0 orientation:UIImageOrientationDownMirrored];
+    
     CGImageRelease(cgImage);
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
     return image;

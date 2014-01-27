@@ -16,49 +16,91 @@
             left: 0;
             padding: 1rem;
         }
+        div#fps {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            margin-left: -5rem;
+            color: green;
+            background-color: #333333;
+            width: 4rem;
+            padding: 0.5rem;
+            opacity: 0.8;
+        }
+        div#container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: orange;
+            padding: 0;
+            margin: 0;
+        }
         </style>
     </head>
     <body>
-        <canvas id="canvas" width="600" height="800"/></canvas>
-        <div id="log">logs:<br /></div>
+        <div id="container">
+          <canvas id="canvas" /></canvas>
+          <div id="log">logs:<br /></div>
+          <div id="fps">fps</div>
+        </div>
     </body>
-    <script src="http://jsconsole.com/remote.js?C5BFED9D-B871-4860-B188-307E7F06436C"></script>
+    <!-- script src="http://jsconsole.com/remote.js?C5BFED9D-B871-4860-B188-307E7F06436C"></script -->
     <script>
         var image = new Image();
+        var container = document.getElementById('container');
+        var width = container.clientWidth, height = container.clientHeight;
+        var fps = 0;
+        var frame_count = 0;
+        var last_time = null;
+        
         var nativeBridge = {
             invoke: function (commandName, args) {
                 //console.log(commandName + ": " + JSON.stringify(args, null, 2));
                 window.location = 'js-call:' + commandName + ':' + encodeURIComponent(JSON.stringify(args));
             }
         };
-        //var clickevent = window.ontouchend ? 'touchend' : 'click';
-        //var evt = (document.createTouch != null ? "ontouchend" : "click");
+
         document.addEventListener('touchend', function() {
           nativeBridge.invoke('nextDemo', {});
         });
                                   
         var logDiv = document.getElementById('log');
+        var fpsDiv = document.getElementById('fps');
 
         // draw image on canvas
         var canvas = document.getElementById('canvas');
+        canvas.setAttribute('width', width);
+        canvas.setAttribute('height', height);
         var ctx = canvas.getContext("2d");
+        ctx.translate(width, 0);
+        ctx.rotate(Math.PI / 2);
         
         // just to test things
-        ctx.fillStyle = "rgba(200,0,0,0.60)";
-        ctx.fillRect(10, 10, 500, 500);
-        console.log("trying to draw static test image");
+        //ctx.fillStyle = "rgba(200,0,0,0.60)";
+        //ctx.fillRect(10, 10, 500, 500);
         
         image.onload = function () {
-          console.log("drawing an image");
-          ctx.clearRect(0, 0, this.width, this.height);
-          ctx.drawImage(this, 0, 0, canvas.width, canvas.height);
+          //ctx.clearRect(0, 0, this.width, this.height);
+          ctx.drawImage(this, 0, 0, height, width);
+          drawFPS();
         };
     
-        image.src = "test.jpeg";
-        
+        drawFPS = function () {
+            frame_count += 1;
+            if (last_time == null) {
+                last_time = new Date();
+            } else if (frame_count % 20 == 0) {
+                var current_time = new Date();
+                var fps = 20 * 1000 / (current_time - last_time);
+                last_time = current_time;
+                fpsDiv.innerHTML = fps + ' FPS';
+            }
+        }
+
         draw = function (imgBase64) {
+            // Test to see if slowness is in JS or not: getting ~9fps
+            //drawFPS();
             image.src = imgBase64;
-            ctx.drawImage(image, 0, 0, image.width, image.height);
         };
     </script>
 </html>
